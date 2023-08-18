@@ -2,7 +2,7 @@
     id="sidebar">
     <div class="text-gray-100 text-xl mt-6">
         <div class="p-2.5 flex items-center">
-            <img class="w-10 px-0.5 py-0.5 rounded-md bg-blue-600" src="img/logo.png">
+            <img class="w-10 px-0.5 py-0.5 rounded-md bg-blue-600" src="{{ asset('/image/logo.png') }}">
             <h1 class="font-bold text-gray-200 text-[15px] mx-auto">JPG ADMIN</h1>
         </div>
         <div class="my-2 bg-gray-600 h-[1px]"></div>
