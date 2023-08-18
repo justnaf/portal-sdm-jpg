@@ -51,11 +51,11 @@
             sidebar.classList.toggle("sm:w-0");
         });
 
-        function dropdown1() {
-            document.querySelector("#submenu1").classList.toggle("hidden");
-            document.querySelector("#arrow1").classList.toggle("rotate-0");
-        }
-        dropdown1();
+        // function dropdown1() {
+        //     document.querySelector("#submenu1").classList.toggle("hidden");
+        //     document.querySelector("#arrow1").classList.toggle("rotate-0");
+        // }
+        // dropdown1();
 
         function dropdown2() {
             document.querySelector("#submenu2").classList.toggle("hidden");

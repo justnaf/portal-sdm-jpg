@@ -7,24 +7,34 @@
         </div>
         <div class="my-2 bg-gray-600 h-[1px]"></div>
     </div>
-    <a href="{{ route('dashboard') }}">
-        @if (request()->routeIs('dashboard'))
-            <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer bg-blue-600 text-white">
-                <i class="bi bi-house-door-fill"></i>
-                <span class="text-[15px] ml-4 text-gray-200 font-bold">Beranda</span>
-            </div>
-        @else
+    @if (request()->routeIs('dashboard'))
+        <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer bg-blue-600 text-white">
+            <i class="bi bi-house-door-fill"></i>
+            <span class="text-[15px] ml-4 text-gray-200 font-bold">Beranda</span>
+        </div>
+    @else
+        <a href="{{ route('dashboard') }}">
             <div
                 class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white">
                 <i class="bi bi-house-door-fill"></i>
                 <span class="text-[15px] ml-4 text-gray-200 font-bold">Beranda</span>
             </div>
-        @endif
-    </a>
-    <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white">
-        <i class="bi bi-bookmark-fill"></i>
-        <span class="text-[15px] ml-4 text-gray-200 font-bold">Presensi</span>
-    </div>
+        </a>
+    @endif
+    @if (request()->routeIs('presensi.*'))
+        <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer bg-blue-600 text-white">
+            <i class="bi bi-bookmark-fill"></i>
+            <span class="text-[15px] ml-4 text-gray-200 font-bold">Presensi</span>
+        </div>
+    @else
+        <a href="{{ route('presensi.index') }}">
+            <div
+                class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white">
+                <i class="bi bi-bookmark-fill"></i>
+                <span class="text-[15px] ml-4 text-gray-200 font-bold">Presensi</span>
+            </div>
+        </a>
+    @endif
     <div class="my-4 bg-gray-600 h-[1px]"></div>
     <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white"
         onclick="dropdown1()">
@@ -36,7 +46,7 @@
             </span>
         </div>
     </div>
-    <div class="text-left text-sm mt-2 w-4/5 mx-auto text-gray-200 font-bold" id="submenu1">
+    {{-- <div class="text-left text-sm mt-2 w-4/5 mx-auto text-gray-200 font-bold" id="submenu1">
         <h1 class="cursor-pointer p-2 hover:bg-blue-600 rounded-md mt-1">
             Absensi
         </h1>
@@ -46,7 +56,7 @@
         <h1 class="cursor-pointer p-2 hover:bg-blue-600 rounded-md mt-1">
             Pengumpulan
         </h1>
-    </div>
+    </div> --}}
     @if (request()->routeIs('profile.*'))
         <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer bg-blue-600 text-white"
             onclick="dropdown2()">
