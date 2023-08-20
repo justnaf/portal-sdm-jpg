@@ -24,7 +24,7 @@
             @include('layouts.navigation')
 
 
-            <div class="grow text-black" id="content">
+            <div class=" grow text-black" id="content">
                 <div class="flex flex-col mt-3 px-3">
 
                     <!-- Page Heading -->
@@ -54,11 +54,26 @@
             let sidebar = document.querySelector("#sidebar");
             sidebar.classList.toggle("translate-x-[-100%]");
             sidebar.classList.toggle("w-0");
+
+            let conten = document.querySelector("#content");
+            if (conten.classList.contains("blur-sm")){
+                conten.classList.remove("blur-sm");
+            }else{
+                conten.classList.add("blur-sm");
+            }
         });
         let toggleButtonOpen = document.querySelector("#menuToggleBtnOpen").addEventListener("click", () => {
             let sidebar = document.querySelector("#sidebar");
             sidebar.classList.remove("translate-x-[-100%]");
             sidebar.classList.remove("w-0");
+
+            let conten = document.querySelector("#content");
+            if (conten.classList.contains("blur-sm")){
+                conten.classList.remove("blur-sm");
+            }else{
+                conten.classList.add("blur-sm");
+            }
+
         });
 
 
