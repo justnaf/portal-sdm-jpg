@@ -1,4 +1,4 @@
-<div class="z-40 w-[250px] translate-x-[-100%] absolute top-0 bottom-0 lg:left-0 p-2 duration-300 overflow-hidden bg-gradient-to-t from-gray-600 to-gray-900 h-full">
+<div class="z-40 w-[250px] translate-x-[-100%] absolute top-0 bottom-0 lg:left-0 p-2 duration-300 overflow-hidden bg-gradient-to-t from-gray-600 to-gray-900 h-full"
     id="sidebar">
     <div class="text-gray-100 text-xl mt-6">
 
@@ -66,8 +66,8 @@
             @can('can add user')
                 <a href="{{ route('users.create') }}">
                     <h1 class="cursor-pointer p-2 hover:bg-blue-600 rounded-md mt-1">
-                        
-                    <i class="bi bi-person-plus px-2"></i>
+
+                        <i class="bi bi-person-plus px-2"></i>
                         Tambah User
                     </h1>
                 </a>

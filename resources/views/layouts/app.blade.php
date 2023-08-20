@@ -55,12 +55,10 @@
             let sidebar = document.querySelector("#sidebar");
             sidebar.classList.toggle("translate-x-[-100%]");
 
-            sidebar.classList.toggle("w-0");
-
             let conten = document.querySelector("#content");
-            if (conten.classList.contains("blur-sm")){
+            if (conten.classList.contains("blur-sm")) {
                 conten.classList.remove("blur-sm");
-            }else{
+            } else {
                 conten.classList.add("blur-sm");
             }
         });
@@ -68,12 +66,10 @@
             let sidebar = document.querySelector("#sidebar");
             sidebar.classList.remove("translate-x-[-100%]");
 
-            sidebar.classList.remove("w-0");
-
             let conten = document.querySelector("#content");
-            if (conten.classList.contains("blur-sm")){
+            if (conten.classList.contains("blur-sm")) {
                 conten.classList.remove("blur-sm");
-            }else{
+            } else {
                 conten.classList.add("blur-sm");
             }
         });
