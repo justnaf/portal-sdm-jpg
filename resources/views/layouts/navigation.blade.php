@@ -1,9 +1,11 @@
-<div class="w-[250px] top-0 bottom-0 lg:left-0 p-2 duration-300 overflow-hidden bg-gradient-to-t from-gray-600 to-gray-900 h-full"
+<div class="z-40 w-[250px] absolute top-0 bottom-0 lg:left-0 p-2 duration-300 overflow-hidden bg-gradient-to-t from-gray-600 to-gray-900 h-full"
     id="sidebar">
     <div class="text-gray-100 text-xl mt-6">
+
         <div class="p-2.5 flex items-center">
             <img class="w-10 px-0.5 py-0.5 rounded-md bg-blue-600" src="{{ asset('/image/logo.png') }}">
             <h1 class="font-bold text-gray-200 text-[15px] mx-auto">JPG ADMIN</h1>
+            <ion-icon name="close-outline" id="menuToggleBtnClose" name="menu"></ion-icon>
         </div>
         <div class="my-2 bg-gray-600 h-[1px]"></div>
     </div>

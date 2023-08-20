@@ -23,12 +23,14 @@
         <div class="flex w-screen h-screen bg-gray-100 dark:bg-gray-900">
             @include('layouts.navigation')
 
+
             <div class="grow text-black" id="content">
                 <div class="flex flex-col mt-3 px-3">
+
                     <!-- Page Heading -->
                     @if (isset($header))
                         <header class="flex items-center bg-white dark:bg-gray-800 shadow">
-                            <ion-icon id="menuToggleBtn" name="menu" class="text-3xl cursor-pointer ml-5">
+                            <ion-icon id="menuToggleBtnOpen" name="menu" class="text-3xl cursor-pointer ml-5">
                             </ion-icon>
                             <div class="max-w-7xl py-6 px-4 sm:px-6 lg:px-8">
                                 {{ $header }}
@@ -48,11 +50,17 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script>
-        let toggleButton = document.querySelector("#menuToggleBtn").addEventListener("click", () => {
+        let toggleButtonClose = document.querySelector("#menuToggleBtnClose").addEventListener("click", () => {
             let sidebar = document.querySelector("#sidebar");
             sidebar.classList.toggle("translate-x-[-100%]");
-            sidebar.classList.toggle("sm:w-0");
+            sidebar.classList.toggle("w-0");
         });
+        let toggleButtonOpen = document.querySelector("#menuToggleBtnOpen").addEventListener("click", () => {
+            let sidebar = document.querySelector("#sidebar");
+            sidebar.classList.remove("translate-x-[-100%]");
+            sidebar.classList.remove("w-0");
+        });
+
 
         function dropdown1() {
             document.querySelector("#submenu1").classList.toggle("hidden");
