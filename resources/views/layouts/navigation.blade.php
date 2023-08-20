@@ -1,4 +1,4 @@
-<div class="z-40 w-[250px] translate-x-[-100%] absolute top-0 bottom-0 lg:left-0 p-2 duration-300 overflow-hidden bg-gradient-to-t from-gray-600 to-gray-900 h-full"
+<div class="z-40 w-[250px] translate-x-[-100%] absolute top-0 bottom-0 lg:left-0 p-2 duration-300 overflow-hidden bg-gradient-to-t from-gray-600 to-gray-900 h-full">
     id="sidebar">
     <div class="text-gray-100 text-xl mt-6">
 
@@ -23,22 +23,20 @@
             </div>
         </a>
     @endif
-    @can('can edit user')
-        @if (request()->routeIs('presensi.*'))
-            <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer bg-blue-600 text-white">
+    @if (request()->routeIs('presensi.*'))
+        <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer bg-blue-600 text-white">
+            <i class="bi bi-bookmark-fill"></i>
+            <span class="text-[15px] ml-4 text-gray-200 font-bold">Presensi</span>
+        </div>
+    @else
+        <a href="{{ route('presensi.index') }}">
+            <div
+                class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white">
                 <i class="bi bi-bookmark-fill"></i>
                 <span class="text-[15px] ml-4 text-gray-200 font-bold">Presensi</span>
             </div>
-        @else
-            <a href="{{ route('presensi.index') }}">
-                <div
-                    class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white">
-                    <i class="bi bi-bookmark-fill"></i>
-                    <span class="text-[15px] ml-4 text-gray-200 font-bold">Presensi</span>
-                </div>
-            </a>
-        @endif
-    @endcan
+        </a>
+    @endif
     <div class="my-4 bg-gray-600 h-[1px]"></div>
     @can('can add user')
         @if (request()->routeIs('users.*'))
@@ -139,5 +137,4 @@
             </div>
         @endif
     @endcan
-
 </div>

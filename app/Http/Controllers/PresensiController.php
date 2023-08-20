@@ -15,8 +15,7 @@ class PresensiController extends Controller
     {
         $cekpresen = Presensi::whereDate('created_at',Carbon::today())->where('users_id','=',Auth()->user()->id)->get();
 
-        $this->data['presensi'] = $cekpresen;
-        return view('presensi.index',$this->data);   
+        return view('presensi.index',['presensi'=>$cekpresen]);   
     }
 
     /**
@@ -43,6 +42,8 @@ class PresensiController extends Controller
                     $presensi = new Presensi;
                     $presensi->users_id = Auth()->user()->id;
                     $presensi->status = $request->status;
+                    $presensi->latitude = $request->latitude;
+                    $presensi->longitude = $request->longitude;
         
             
                     $savePresensi = $presensi->save();
@@ -82,6 +83,8 @@ class PresensiController extends Controller
                         $presensi = new Presensi;
                         $presensi->users_id = Auth()->user()->id;
                         $presensi->status = $request->status;
+                        $presensi->latitude = $request->latitude;
+                        $presensi->longitude = $request->longitude;
             
                 
                         $savePresensi = $presensi->save();
@@ -113,6 +116,8 @@ class PresensiController extends Controller
                     $presensi = new Presensi;
                     $presensi->users_id = Auth()->user()->id;
                     $presensi->status = $request->status;
+                    $presensi->latitude = $request->latitude;
+                    $presensi->longitude = $request->longitude;
         
             
                     $savePresensi = $presensi->save();

@@ -24,6 +24,7 @@
             @include('layouts.navigation')
 
 
+
             <div class=" grow text-black" id="content">
                 <div class="flex flex-col mt-3 px-3">
 
@@ -53,6 +54,7 @@
         let toggleButtonClose = document.querySelector("#menuToggleBtnClose").addEventListener("click", () => {
             let sidebar = document.querySelector("#sidebar");
             sidebar.classList.toggle("translate-x-[-100%]");
+
             sidebar.classList.toggle("w-0");
 
             let conten = document.querySelector("#content");
@@ -65,6 +67,7 @@
         let toggleButtonOpen = document.querySelector("#menuToggleBtnOpen").addEventListener("click", () => {
             let sidebar = document.querySelector("#sidebar");
             sidebar.classList.remove("translate-x-[-100%]");
+
             sidebar.classList.remove("w-0");
 
             let conten = document.querySelector("#content");
@@ -73,7 +76,6 @@
             }else{
                 conten.classList.add("blur-sm");
             }
-
         });
 
 
