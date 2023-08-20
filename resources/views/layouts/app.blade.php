@@ -6,7 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <!-- Icon -->
+        <link rel="icon" href="">
+
+        <title>{{ config('app.name') }}</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -51,11 +54,11 @@
             sidebar.classList.toggle("sm:w-0");
         });
 
-        // function dropdown1() {
-        //     document.querySelector("#submenu1").classList.toggle("hidden");
-        //     document.querySelector("#arrow1").classList.toggle("rotate-0");
-        // }
-        // dropdown1();
+        function dropdown1() {
+            document.querySelector("#submenu1").classList.toggle("hidden");
+            document.querySelector("#arrow1").classList.toggle("rotate-0");
+        }
+        dropdown1();
 
         function dropdown2() {
             document.querySelector("#submenu2").classList.toggle("hidden");
