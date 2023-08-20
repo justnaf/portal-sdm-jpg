@@ -22,7 +22,10 @@
     <body class="font-sans antialiased">
         <div class="flex w-screen h-screen bg-gray-100 dark:bg-gray-900">
             @include('layouts.navigation')
-            <div class="grow text-black" id="content">
+
+
+
+            <div class=" grow text-black" id="content">
                 <div class="flex flex-col mt-3 px-3">
 
                     <!-- Page Heading -->
@@ -51,12 +54,28 @@
         let toggleButtonClose = document.querySelector("#menuToggleBtnClose").addEventListener("click", () => {
             let sidebar = document.querySelector("#sidebar");
             sidebar.classList.toggle("translate-x-[-100%]");
-            sidebar.classList.remove("lg:w-[250px] w-screen");
+
+            sidebar.classList.toggle("w-0");
+
+            let conten = document.querySelector("#content");
+            if (conten.classList.contains("blur-sm")){
+                conten.classList.remove("blur-sm");
+            }else{
+                conten.classList.add("blur-sm");
+            }
         });
         let toggleButtonOpen = document.querySelector("#menuToggleBtnOpen").addEventListener("click", () => {
             let sidebar = document.querySelector("#sidebar");
             sidebar.classList.remove("translate-x-[-100%]");
-            sidebar.classList.toggle("lg:w-[250px] w-screen");
+
+            sidebar.classList.remove("w-0");
+
+            let conten = document.querySelector("#content");
+            if (conten.classList.contains("blur-sm")){
+                conten.classList.remove("blur-sm");
+            }else{
+                conten.classList.add("blur-sm");
+            }
         });
 
 

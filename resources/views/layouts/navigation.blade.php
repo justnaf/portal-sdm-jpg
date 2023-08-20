@@ -1,4 +1,4 @@
-<div class="z-40 lg:w-[250px] w-screen translate-x-[-100%] absolute top-0 bottom-0 lg:left-0 p-2 duration-300 overflow-hidden bg-gradient-to-t from-gray-600 to-gray-900 h-full"
+<div class="z-40 w-[250px] translate-x-[-100%] absolute top-0 bottom-0 lg:left-0 p-2 duration-300 overflow-hidden bg-gradient-to-t from-gray-600 to-gray-900 h-full">
     id="sidebar">
     <div class="text-gray-100 text-xl mt-6">
 
@@ -66,6 +66,8 @@
             @can('can add user')
                 <a href="{{ route('users.create') }}">
                     <h1 class="cursor-pointer p-2 hover:bg-blue-600 rounded-md mt-1">
+                        
+                    <i class="bi bi-person-plus px-2"></i>
                         Tambah User
                     </h1>
                 </a>
@@ -73,6 +75,7 @@
             @can('can edit user')
                 <a href="{{ route('users.index') }}">
                     <h1 class="cursor-pointer p-2 hover:bg-blue-600 rounded-md mt-1">
+                        <i class="bi bi-list-ol px-2"></i>
                         List User
                     </h1>
                 </a>
@@ -94,13 +97,14 @@
             <div class="text-left text-sm mt-2 w-4/5 mx-auto text-gray-200 font-bold" id="submenu2">
                 <a href="{{ route('profile.edit') }}">
                     <h1 class="cursor-pointer p-2 hover:bg-blue-600 rounded-md mt-1">
+                        <i class="bi bi-pencil-square px-2"></i>
                         Profile Edit
                     </h1>
                 </a>
                 <form action="{{ route('logout') }}" method="POST">
                     @csrf
-                    <button type="submit" class="w-full items-start cursor-pointer p-2 hover:bg-blue-600 rounded-md mt-1">
-                        <i class="bi bi-box-arrow-in-right"></i>
+                    <button type="submit" class="w-full text-left cursor-pointer p-2 hover:bg-red-600 rounded-md mt-1">
+                        <i class="bi bi-box-arrow-in-right px-2"></i>
                         Logout
                     </button>
                 </form>
@@ -119,14 +123,14 @@
             <div class="text-left text-sm mt-2 w-4/5 mx-auto text-gray-200 font-bold" id="submenu2">
                 <a href="{{ route('profile.edit') }}">
                     <h1 class="cursor-pointer p-2 hover:bg-blue-600 rounded-md mt-1">
-
+                        <i class="bi bi-pencil-square px-2"></i>
                         Profile Edit
                     </h1>
                 </a>
                 <form action="{{ route('logout') }}" method="POST">
                     @csrf
-                    <button type="submit" class="w-full items-start cursor-pointer p-2 hover:bg-blue-600 rounded-md mt-1">
-                        <i class="bi bi-box-arrow-in-right"></i>
+                    <button type="submit" class="w-full text-left cursor-pointer p-2 hover:bg-red-600 rounded-md mt-1">
+                        <i class="bi bi-box-arrow-in-right px-2"></i>
                         Logout
                     </button>
                 </form>
