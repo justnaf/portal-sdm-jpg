@@ -16,6 +16,8 @@ return new class extends Migration
             $table->foreignId('users_id');
             $table->foreign('users_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('status');
+            $table->string('latitude');
+            $table->string('longitude');
             $table->timestamps();
         });
     }
